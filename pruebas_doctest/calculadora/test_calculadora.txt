@@ -1,0 +1,104 @@
+>>> from calculadora import calculadora
+>>> calc = calculadora()
+
+>>> calc.sumar(2,3)
+5
+
+>>> calc.sumar(10,3)
+13
+
+>>> calc.sumar('x',3)
+'Solo se aceptan numeros'
+
+>>> calc.sumar(-2,-3)
+'Sólo numeros positivos'
+
+>>> calc.sumar(1, 9.5)
+'Sólo numeros enteros'
+
+>>> calc.sumar([0.8], 9.5)
+'Sólo numeros, no listas'
+
+>>> calc.restar(8,2)
+6
+
+>>> calc.restar(-3,2)
+-5
+
+>>> calc.restar('hola',2)
+'No se permiten cadenas de texto'
+
+>>> calc.restar([],2)
+'No se permiten listas'
+
+>>> calc.restar(12.4,2)
+'No se permiten decimales'
+
+>>> calc.restar({},3)
+'Elemento no valido para la operacion'
+
+>>> calc.multiplicar(8,2)
+16
+
+>>> calc.multiplicar(-3,2)
+-6
+
+>>> calc.multiplicar('hola',2)
+'No se permiten cadenas de texto'
+
+>>> calc.multiplicar([],2)
+'No se permiten listas'
+
+>>> calc.multiplicar(12.4,2)
+'No se permiten decimales'
+
+>>> calc.multiplicar({},3)
+'Elemento no valido para la operacion'
+
+>>> calc.dividir(1,2)
+0.5
+
+>>> calc.dividir(10,3)
+3.33
+
+>>> calc.dividir(20,0)
+'No se puede dividir entre cero'
+
+>>> calc.dividir('y',2)
+'No se permiten cadenas de texto'
+
+>>> calc.dividir([],2)
+'No se permiten listas'
+
+>>> calc.dividir(8.4,2)
+'No se permiten decimales'
+
+>>> calc.dividir({},3)
+'Elemento no valido para la operacion'
+
+>>> calc.sqrt(4,2)
+2
+
+>>> calc.sqrt(8,3)
+2
+
+>>> calc.sqrt(11,4)
+1.82
+
+>>> calc.sqrt(2.3,2)
+'No se permiten decimales'
+
+>>> calc.sqrt(-1,2)
+'No se permiten raíces negativas'
+
+>>> calc.potencia(2,3)
+8
+
+>>> calc.potencia(4,2)
+16
+
+>>> calc.potencia(2.3,2)
+'No se permiten decimales'
+
+>>> calc.potencia(-1,2)
+'No se permiten numeros negativos'
