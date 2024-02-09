@@ -1,0 +1,86 @@
+Un alumno desea saber cual será su calificación final en la materia de Testing.
+Dicha calificación se compone de tres exámenes parciales.
+
+>>> from promedio import promedio
+>>> p = promedio()
+
+>>> p.calcular(10,10,10)
+10.0
+
+>>> p.calcular(9,9.5,7)
+8.5
+
+>>> p.calcular(5,6,6)
+5.67
+
+>>> p.calcular('a', 2, 4)
+'No se aceptan cadenas de texto'
+
+>>> p.calcular(3,'b',3)
+'No se aceptan cadenas de texto'
+
+>>> p.calcular(3,2,'z')
+'No se aceptan cadenas de texto'
+
+>>> p.calcular([], 3, 2)
+'No se aceptan listas'
+
+>>> p.calcular(10, 3, [])
+'No se aceptan listas'
+
+>>> p.calcular(9, [], 2)
+'No se aceptan listas'
+
+>>> p.calcular(False,2,2)
+'No se aceptan booleanos'
+
+>>> p.calcular(10,True,2)
+'No se aceptan booleanos'
+
+>>> p.calcular(10,2,False)
+'No se aceptan booleanos'
+
+>>> p.calcular(-1,2,2)
+'No se aceptan numeros negativos'
+
+>>> p.calcular(1,-2,2)
+'No se aceptan numeros negativos'
+
+>>> p.calcular(10,2,-9)
+'No se aceptan numeros negativos'
+
+>>> p.calcular(11,2,10)
+'La calificación máxima es 10'
+
+>>> p.calcular(10,20,10)
+'La calificación máxima es 10'
+
+>>> p.calcular(10,2,100)
+'La calificación máxima es 10'
+
+>>> p.calcular({}, 2, 1)
+'Elementos no válidos para el cálculo'
+
+>>> p.calcular(10, {}, 1)
+'Elementos no válidos para el cálculo'
+
+>>> p.calcular(9, 2, {})
+'Elementos no válidos para el cálculo'
+
+>>> p.calcular((), 10,9)
+'Elementos no válidos para el cálculo'
+
+>>> p.calcular(10, (),9)
+'Elementos no válidos para el cálculo'
+
+>>> p.calcular(9, 10,())
+'Elementos no válidos para el cálculo'
+
+>>> p.calcular(None,10,10)
+'No se aceptan valores nulos'
+
+>>> p.calcular(10,None,10)
+'No se aceptan valores nulos'
+
+>>> p.calcular(9,10,None)
+'No se aceptan valores nulos'

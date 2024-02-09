@@ -1,0 +1,73 @@
+Dada la edad enviar los siguientes mensajes
+- Si eres menor de 0: No existes
+- Si eres menor de 13: Eres niño
+- Si eres menor de 18: Eres adolescente
+- Si eres menor de 65: Eres adulto
+- Si eres menor de 120: Eres adulto mayor
+- De lo contrario: Eres Mumm-Ra
+
+>>> from edades import edades
+>>> e = edades()
+
+>>> e.mensaje(-5)
+'No existes'
+
+>>> e.mensaje(-1)
+'No existes'
+
+>>> e.mensaje(0)
+'Eres niño'
+
+>>> e.mensaje(5)
+'Eres niño'
+
+>>> e.mensaje(13)
+'Eres adolescente'
+
+>>> e.mensaje(17)
+'Eres adolescente'
+
+>>> e.mensaje(18)
+'Eres adulto'
+
+>>> e.mensaje(30)
+'Eres adulto'
+
+>>> e.mensaje(64)
+'Eres adulto'
+
+>>> e.mensaje(119)
+'Eres adulto mayor'
+
+>>> e.mensaje(80)
+'Eres adulto mayor'
+
+>>> e.mensaje(150)
+'Eres Mumm-Ra'
+
+>>> e.mensaje(1000)
+'Eres Mumm-Ra'
+
+>>> e.mensaje('hola')
+'No se permiten cadenas'
+
+>>> e.mensaje('x')
+'No se permiten cadenas'
+
+>>> e.mensaje(12.4)
+'Solo numeros enteros'
+
+>>> e.mensaje(0.0001)
+'Solo numeros enteros'
+
+>>> e.mensaje(True)
+'No se permiten booleanos'
+
+>>> e.mensaje([])
+'No se permiten listas'
+
+>>> e.mensaje(())
+'Elemento proporcionado no válido'
+
+>>> e.mensaje({})
+'Elemento proporcionado no válido'

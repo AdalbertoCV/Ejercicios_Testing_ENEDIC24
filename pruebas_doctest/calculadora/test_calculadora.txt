@@ -10,6 +10,9 @@
 >>> calc.sumar('x',3)
 'Solo se aceptan numeros'
 
+>>> calc.sumar(True, 4)
+'No se permiten booleanos'
+
 >>> calc.sumar(-2,-3)
 'Sólo numeros positivos'
 
@@ -37,6 +40,9 @@
 >>> calc.restar({},3)
 'Elemento no valido para la operacion'
 
+>>> calc.restar(True,3)
+'No se permiten booleanos'
+
 >>> calc.multiplicar(8,2)
 16
 
@@ -54,6 +60,9 @@
 
 >>> calc.multiplicar({},3)
 'Elemento no valido para la operacion'
+
+>>> calc.multiplicar(True,3)
+'No se permiten booleanos'
 
 >>> calc.dividir(1,2)
 0.5
@@ -76,6 +85,9 @@
 >>> calc.dividir({},3)
 'Elemento no valido para la operacion'
 
+>>> calc.dividir(True,3)
+'No se permiten booleanos'
+
 >>> calc.sqrt(4,2)
 2
 
@@ -91,6 +103,18 @@
 >>> calc.sqrt(-1,2)
 'No se permiten raíces negativas'
 
+>>> calc.sqrt(True,3)
+'No se permiten booleanos'
+
+>>> calc.sqrt('y',2)
+'No se permiten cadenas de texto'
+
+>>> calc.sqrt([],2)
+'No se permiten listas'
+
+>>> calc.sqrt({},3)
+'Elemento no valido para la operacion'
+
 >>> calc.potencia(2,3)
 8
 
@@ -102,3 +126,15 @@
 
 >>> calc.potencia(-1,2)
 'No se permiten numeros negativos'
+
+>>> calc.potencia(True,3)
+'No se permiten booleanos'
+
+>>> calc.potencia('y',2)
+'No se permiten cadenas de texto'
+
+>>> calc.potencia([],2)
+'No se permiten listas'
+
+>>> calc.potencia({},3)
+'Elemento no valido para la operacion'
