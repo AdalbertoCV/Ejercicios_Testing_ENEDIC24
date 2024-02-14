@@ -76,5 +76,5 @@ class Test_promedio(unittest.TestCase):
         resultado = self.e.mensaje({})
         self.assertEqual('Elemento proporcionado no válido', resultado)
 
-if __name__ == '__main__':
+if __name__ == '__main__': #pragma: no cover
     unittest.main()

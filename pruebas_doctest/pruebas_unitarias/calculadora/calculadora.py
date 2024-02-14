@@ -49,9 +49,6 @@ class calculadora():
             elif isinstance(num1,list) or isinstance(num2,list):
                 # Si es asi, regresamos un mensaje
                 return 'No se permiten listas'
-            # Si se envian booleanos
-            elif isinstance(num1,bool) or isinstance(num2,bool):
-                return 'No se permiten booleanos'
             else:
                 return 'Elemento no valido para la operacion'
         
@@ -76,9 +73,6 @@ class calculadora():
             elif isinstance(num1,list) or isinstance(num2,list):
                 # Si es asi, regresamos un mensaje
                 return 'No se permiten listas'
-            # Si se envian booleanos
-            elif isinstance(num1,bool) or isinstance(num2,bool):
-                return 'No se permiten booleanos'
             else:
                 return 'Elemento no valido para la operacion'
             
@@ -100,10 +94,9 @@ class calculadora():
                      # Si no es un entero, redondeamos a dos decimales
                      return round(resultado, 2)
             else:
-                # Si el divisor menor o igual a cero
-                if num2 <= 0:
-                    # Si es asi, regresamos un mensaje
-                    return 'No se puede dividir entre cero'
+                 return 'No se puede dividir entre cero'
+                
+                    
         else:
             # Verificamos que no se envien decimales
             if isinstance(num1, float) or isinstance(num2,float):
@@ -117,9 +110,6 @@ class calculadora():
             elif isinstance(num1,list) or isinstance(num2,list):
                 # Si es asi, regresamos un mensaje
                 return 'No se permiten listas'
-            # Si se envian booleanos
-            elif isinstance(num1,bool) or isinstance(num2,bool):
-                return 'No se permiten booleanos'
             else:
                 return 'Elemento no valido para la operacion'
             
@@ -156,9 +146,6 @@ class calculadora():
             elif isinstance(num1,list) or isinstance(num2,list):
                 # Si es asi, regresamos un mensaje
                 return 'No se permiten listas'
-            # Si se envian booleanos
-            elif isinstance(num1,bool) or isinstance(num2,bool):
-                return 'No se permiten booleanos'
             else:
                 return 'Elemento no valido para la operacion'
 

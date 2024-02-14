@@ -2,7 +2,6 @@
 # Adalberto Cerrillo Vázquez - 8A
 class promedio():
     def calcular(self,p1,p2,p3):
-        try:
             # Verificamos que no se haya enviado ningun valor nulo.
             if p1 is not None and p2 is not None and p3 is not None:
                 #Verificamos que se hayan enviado 3 numeros
@@ -33,5 +32,3 @@ class promedio():
                     return 'Elementos no válidos para el cálculo'
             else:
                 return 'No se aceptan valores nulos'
-        except:
-            return 'Error'

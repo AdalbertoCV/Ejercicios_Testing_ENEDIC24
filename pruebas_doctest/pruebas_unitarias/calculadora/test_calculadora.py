@@ -196,5 +196,21 @@ class TestCalculadora(unittest.TestCase):
         resultado = self.calc.potencia({},3)
         self.assertEqual('Elemento no valido para la operacion',resultado)
 
-if __name__ == '__main__':
+    def test_resta_true_menos_tres(self):
+        resultado = self.calc.restar(True,3)
+        self.assertEqual('No se permiten booleanos',resultado)
+
+    def test_multiplicacion_true_por_tres(self):
+        resultado = self.calc.multiplicar(True,3)
+        self.assertEqual('No se permiten booleanos',resultado)
+
+    def test_raiz_booleana(self):
+        resultado = self.calc.sqrt(True,3)
+        self.assertEqual('No se permiten booleanos',resultado)
+
+    def test_division_exacta(self):
+        resultado = self.calc.dividir(1,1)
+        self.assertEqual(1, resultado)
+
+if __name__ == '__main__': #pragma: no cover
     unittest.main()

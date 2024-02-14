@@ -64,5 +64,5 @@ class Test_horas_extras(unittest.TestCase):
         resultado  = self.h.calcular(10,{})
         self.assertEqual('Formato no válido', resultado)
 
-if __name__ == '__main__':
+if __name__ == '__main__': #pragma: no cover
     unittest.main()

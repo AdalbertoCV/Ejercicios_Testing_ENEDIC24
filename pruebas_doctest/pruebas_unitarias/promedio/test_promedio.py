@@ -48,5 +48,5 @@ class Test_promedio(unittest.TestCase):
         resultado = self.p.calcular(10,None,10)
         self.assertEqual('No se aceptan valores nulos', resultado)
 
-if __name__ == '__main__':
+if __name__ == '__main__': #pragma: no cover
     unittest.main()
