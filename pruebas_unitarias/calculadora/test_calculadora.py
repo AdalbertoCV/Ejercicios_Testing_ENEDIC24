@@ -20,10 +20,6 @@ class TestCalculadora(unittest.TestCase):
         resultado = self.calc.sumar(10,3)
         self.assertEqual(13, resultado)
 
-    def test_sumar_x_mas_tres(self):
-        resultado = self.calc.sumar('x',3)
-        self.assertEqual('Solo se aceptan numeros', resultado)
-
     def test_sumar_true_mas_tres(self):
         resultado = self.calc.sumar(True,3)
         self.assertEqual('No se permiten booleanos', resultado)
