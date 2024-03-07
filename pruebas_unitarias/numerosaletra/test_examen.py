@@ -1,4 +1,4 @@
-from examen import numeros_a_letras
+from Ejercicios_Testing_ENEDIC24.pruebas_unitarias.numerosaletra.numeros_a_letras import numeros_a_letras
 import unittest
 
 class Test_promedio(unittest.TestCase):
