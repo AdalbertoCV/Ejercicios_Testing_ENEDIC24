@@ -45,3 +45,17 @@ def step_impl(context, candidato):
     assert candidato in lista.text, f"No se registró el candidato: {candidato}"
     time.sleep(2)
     
+
+@given(u'escribo el apellido paterno "{apaterno}"')
+def step_impl(context, apaterno):
+    context.driver.find_element(By.NAME, 'apellido_paterno').send_keys(apaterno)
+
+
+@given(u'escribo el apellido materno "{amaterno}"')
+def step_impl(context, amaterno):
+    context.driver.find_element(By.NAME, 'apellido_materno').send_keys(amaterno)
+    
+@given(u'selecciono la imagen de candidato "{Imagen}"')
+def step_impl(context, Imagen):
+    context.driver.find_element(By.NAME, 'foto').send_keys(Imagen)
+    time.sleep(2)

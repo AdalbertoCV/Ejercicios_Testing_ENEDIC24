@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votaciones</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Esto es opcional, ajusta la altura según sea necesario */
+    }
+
+    .img-size{
+        width: 200px;
+        height: 200px;
+    }
+</style>
+<body>
+    <table class="container" title="Candidatos a la presidencia"name="tabla-candidatos">
+        <tr>
+          <th>Partido</th>
+          <th>Foto Partido</th>
+          <th>Candidato</th>
+          <th>Foto Candidato</th>
+          <th>Acciones</th>
+        </tr>
+        {% for candidato in candidatos %}
+        <tr>
+          <td>{{candidato.partido}}</td>
+          <td><img class="img-size" src="{{candidato.partido.logo.url}}" alt=""></td>
+          <td>{{candidato}}</td>
+          <td><img class="img-size"  src="{{candidato.foto.url}}" alt=""></td>
+          <td><a href="{% url 'votarCandidato' candidato.id %}" name="{{candidato}}">Votar</a></td>
+        </tr>
+        {% endfor %}
+    </table> 
+</body>
+</html>

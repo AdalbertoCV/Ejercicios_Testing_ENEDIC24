@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de las votaciones</title>
+</head>
+<style>
+  .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Esto es opcional, ajusta la altura según sea necesario */
+  }
+
+  .img-size{
+      width: 200px;
+      height: 200px;
+  }
+</style>
+<body>
+    <h1> Gracias por votar por: {{candidato_votado}} </h1>
+    <h2> Resultados de las votaciones </h2>
+    <table class="container" title="Resultados de las votaciones">
+        <tr>
+          <th>Partido</th>
+          <th>Foto Partido</th>
+          <th>Candidato</th>
+          <th>Foto Candidato</th>
+          <th>Votos Totales</th>
+        </tr>
+        {% for candidato, num_votos in resultados.items %}
+        <tr>
+          <td>{{ candidato.partido }}</td>
+          <td><img class="img-size" src="{{candidato.partido.logo.url}}" alt=""></td>
+          <td>{{ candidato }}</td>
+          <td><img class="img-size" src="{{candidato.foto.url}}" alt=""></td>
+          <td>{{ num_votos }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h3>El ganador es: {{ganador}}</h3> 
+</body>
+</html>
