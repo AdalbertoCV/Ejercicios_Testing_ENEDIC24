@@ -1,0 +1,23 @@
+# Entornos y dependencias
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Secretos y configuración local
+.env
+credenciales.py
+
+# Base de datos local
+*.sqlite3
+
+# Sistema operativo / editores
+.DS_Store
+.idea/
+.vscode/
